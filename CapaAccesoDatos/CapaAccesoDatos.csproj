@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D563BA53-74D8-4C34-AE9B-EBBF97A3A26E}</ProjectGuid>
+    <ProjectGuid>{9403FB7A-6682-40E1-97DE-F9B890471D9D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LibreriaCajero</RootNamespace>
-    <AssemblyName>LibreriaCajero</AssemblyName>
+    <RootNamespace>CapaAccesoDatos</RootNamespace>
+    <AssemblyName>CapaAccesoDatos</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="LibreriaCajero">
+      <HintPath>..\LibreriaCajero\bin\Debug\LibreriaCajero.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,11 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cuenta.cs" />
-    <Compile Include="EnumTipo.cs" />
-    <Compile Include="ListaUsuarios.cs" />
-    <Compile Include="Tarjeta.cs" />
-    <Compile Include="Usuario.cs" />
+    <Compile Include="AccesoDatos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -34,35 +34,5 @@ namespace LibreriaCajero
         {
             c1.FKusuario = id;
         }
-
-        public void validarTarjeta(string numeroingresado) 
-        {
-            string contraIngresada;
-            foreach (var cuenta in cuentas) 
-            {
-                if (numeroingresado == cuenta.FKtarjeta)
-                {
-                    Console.WriteLine("Usuario = " + cuenta.usuarioC);
-                    Console.WriteLine("Por favor, Ingrese la clave de la cuenta bancaria : ");
-                    contraIngresada = Console.ReadLine();
-                    if (contraIngresada == cuenta.contrasena)
-                    {
-                        Console.WriteLine("Ingreso a la cuenta exitoso");
-                        cuenta.MenuAcciones();
-                    }
-                    else 
-                    {
-                        Console.WriteLine("Contrasena incorrecta");
-                        break;
-                    }
-                }
-                else 
-                {
-                    Console.WriteLine("No se encontro ningun usuario o cuenta asociada a esa tarjeta");
-                }
-
-            }
-        }
-
     }
 }

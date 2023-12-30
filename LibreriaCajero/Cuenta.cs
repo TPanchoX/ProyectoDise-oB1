@@ -12,85 +12,44 @@ namespace LibreriaCajero
         public string usuarioC {  get; set; }
         public string contrasena { get; set; }
         private double saldo { get; set; }
-        private string tipoC { get; set; }
         public string FKtarjeta;
         public int FKusuario = 0;
 
-        public Cuenta(string usuarioC, string contrasena, double saldo, string tipoC)
+        public Enumt Tipo { get; set; } 
+
+        public Cuenta() { }
+        public Cuenta(string usuarioC, string contrasena, double saldo, Enumt t)
         {
             id = id + 1;
             this.usuarioC = usuarioC;
             this.contrasena = contrasena;
             this.saldo = saldo;
-            this.tipoC = tipoC;
+            this.Tipo = t;
         }
 
-        public double Depositar(double valorDepositar) 
+        public void Depositar(double valorDepositar) 
         {
             saldo = valorDepositar + saldo;
-            return saldo;
         }
 
-        public string Retirar(double valorRetiro) 
+        public void Retirar(double valorRetiro) 
         {
-            if (saldo >= valorRetiro)
-            {
                 saldo = saldo - valorRetiro;
-                return "Retiro excitoso: su saldo es" + saldo;
-            }
-            else 
-            {
-                return "Su saldo es insuficiente para realizar esta transaccion" ;
-            }
         }
 
-        public void MenuAcciones() 
+
+        public Boolean ValidarContra(string ContraIngresada) 
         {
-            int opcion;
-
-
-            do 
+            if (ContraIngresada == contrasena) 
             {
-                Console.WriteLine("Por favor, seleccione la opcion que desee:");
-                Console.WriteLine("1.Retirar Dinero");
-                Console.WriteLine("2.Depositar Dinero");
-                Console.WriteLine("3.Mostrar saldo");
-                Console.WriteLine("4.salir");
-                opcion = int.Parse(Console.ReadLine());
-                switch (opcion)
-                {
-                    case 1:
-                        Console.WriteLine("Ingrese el monto a retirar: ");
-                        double montoRetiro = double.Parse(Console.ReadLine());
-
-                        Console.WriteLine(Retirar(montoRetiro));
-
-                        break;
-
-                    case 2:
-                        Console.WriteLine("Ingrese el monto a depositar: ");
-                        double montoDepositar = double.Parse(Console.ReadLine());
-
-                        Depositar(montoDepositar);
-
-                        break;
-
-                    case 3:
-
-                        Console.WriteLine("Su saldo es:" + saldo);
-
-                        break;
-                }
+                return true;
             }
-            while ( opcion != 4);
-            
+            return false;
         }
-
-
-
+       
         public override string ToString() // Obliga al override.. que es sobrescritura
         {
-            return usuarioC  + saldo + tipoC;
+            return usuarioC  + saldo + Tipo;
         }
     }
 }
