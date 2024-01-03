@@ -33,11 +33,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CapaAccesoDatos">
+    <Reference Include="CapaAccesoDatos, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\CapaAccesoDatos\bin\Debug\CapaAccesoDatos.dll</HintPath>
     </Reference>
-    <Reference Include="LibreriaCajero">
-      <HintPath>..\CapaAccesoDatos\bin\Debug\LibreriaCajero.dll</HintPath>
+    <Reference Include="LibreriaCajero, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LibreriaCajero\bin\Debug\LibreriaCajero.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

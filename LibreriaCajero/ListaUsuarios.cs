@@ -42,6 +42,7 @@ namespace LibreriaCajero
             return cuentaSeleccionada;
         }
 
+
         public string tostring() 
         {
             return cuentaSeleccionada.ToString();

@@ -9,7 +9,7 @@ namespace CapaAccesoDatos
 {
     public class AccesoDatos
     {
-
+        ListaUsuarios list1 = new ListaUsuarios();
         public AccesoDatos() 
         {
             DateTime dt = new DateTime(2002, 8, 6);
@@ -30,13 +30,13 @@ namespace CapaAccesoDatos
             u1.AgregarCuentas(c2);
             u1.setearFK(c2);
 
-           
-            ListaUsuarios list1 = new ListaUsuarios();
 
             list1.AgregarUsuarios(u1);
-
-            list1.returnCuenta();
         }
-       
+
+        public ListaUsuarios retornoLista() 
+        {
+            return list1;
+        } 
     }
 }

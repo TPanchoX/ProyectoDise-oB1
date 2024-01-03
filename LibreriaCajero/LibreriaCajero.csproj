@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CapaAccesoDatos">
+      <HintPath>..\CapaAccesoDatos\bin\Debug\CapaAccesoDatos.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CreacionDatos.cs" />
     <Compile Include="Cuenta.cs" />
     <Compile Include="EnumTipo.cs" />
     <Compile Include="ListaUsuarios.cs" />
